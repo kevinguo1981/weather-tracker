@@ -24,7 +24,8 @@ jobs:
 
       - name: Run weather script
         run: python weather.py
-    - name: Commit updated data
+
+      - name: Commit updated data   # --- just fixed
         run: |
           git config user.name "Weather Agent"
           git config user.email "actions@github.com"
