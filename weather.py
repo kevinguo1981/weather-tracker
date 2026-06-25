@@ -23,6 +23,8 @@ def get_historical_weather(lat, lon, start_date, end_date):
         "timezone": "America/Los_Angeles"
     }
     response = requests.get(url, params=params)
+    print(response.status_code)
+    print(response.text[:200])
     return response.json()
 
 def get_forecast(lat, lon):
