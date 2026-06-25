@@ -26,7 +26,9 @@ def get_historical_weather(lat, lon, start_date, end_date):
     print(response.status_code)
     print(response.text[:200])
     return response.json()
-
+current_data = get_current_weather(LATITUDE, LONGITUDE)
+current_temp = current_data["current"]["temperature_2m"]
+current_time = current_data["current"]["time"]
 def get_forecast(lat, lon):
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
