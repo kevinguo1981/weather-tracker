@@ -65,6 +65,7 @@ for year_data in all_data:
 historical_df = pd.concat(dfs, ignore_index=True)
 
 # Get the 7-day forecast   # ← just added
+print("About to fetch forecast...")
 forecast_data = get_forecast(LATITUDE, LONGITUDE)
 forecast_df = pd.DataFrame({
     "date": forecast_data["daily"]["time"],
